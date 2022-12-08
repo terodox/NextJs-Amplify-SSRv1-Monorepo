@@ -1,7 +1,10 @@
-customHeaders:
-  - pattern: '**/*'
-    headers:
-    - key: 'x-testing-custom-header'
-      value: 'yup they work'
-    - key: 'x-testing-another-custom-header'
-      value: 'it works too'
+version: 1
+applications:
+  - appRoot: application-1
+    customHeaders:
+      - pattern: '**/*'
+        headers:
+        - key: 'x-testing-custom-header'
+          value: 'yup they work'
+        - key: 'x-testing-another-custom-header'
+          value: 'it works too'
