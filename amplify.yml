@@ -19,3 +19,22 @@ applications:
       cache:
         paths:
           - node_modules/**/*
+  - appRoot: application-2
+    env:
+      variables:
+        TESTING_ENV_VAR: 'You are testing the env var'
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - yarn install
+        build:
+          commands:
+            - yarn run build
+      artifacts:
+        baseDirectory: .next
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
